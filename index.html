@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Salary Expenditure</title>
+      <script type="text/javascript" src="vendor/jquery-3.1.1.min.js"></script>
+      <script type="text/javascript" src="forms.js"></script>
+      <link rel="stylesheet" href="form-style.css" />
+  </head>
+  <body>
+    <h1>jQuery Forms</h1>
+    <div>
+      <form id="employeeinfo">
+        <label for="employeeFirstName">Employee First Name:</label>
+        <input type="text" id="employeeFirstName" name="employeeFirstName" />
+
+        <label for="employeeLastName">Employee Last Name:</label>
+        <input type="text" id="employeeLastName" name="employeeLastName" />
+
+        <label for="empNumber">Employee ID Number:</label>
+        <input type="text" id="empNumber" name="empNumber" />
+
+        <label for="jobTitle">Job Title:</label>
+        <input type="text" id="jobTitle" name="jobTitle" />
+
+        <label for="yearlySalary">Yearly Salary:</label>
+        <input type="number" id="yearlySalary" name="yearlySalary" />
+
+        <input type="submit" value="Submit Employee" />
+      </form>
+    </div>
+    <div id="employeeTable">
+      <table>
+        <tr>
+          <th>
+            Full Name
+          </th>
+          <th>
+            ID Number
+          </th>
+          <th>
+            Emp Number
+          </th>
+          <th>
+            Job Title
+          </th>
+          <th>
+            Yearly Salary
+          </th>
+        </tr>
+      </table>
+    </div>
+    <div id="YearlySalaryTotals">
+
+    </div>
+    <div id="monthlyExpenditure">
+
+    </div>
+  </body>
+</html>
+
+<p>
+  For your weekend challenge, you will need to create an application that records employee data, including their salary. We also want to add the salaries up so we know how much we’re spending each month. Start with the forms folder in the github repo provided.
+
+Setup
+You may begin from the code in the forms folder. This contains the input fields and the code to process the input into an object.
+
+You will need to download and source in the jQuery library!
+
+Base Functionality
+
+The application should first have an input form that collects:</p>
+
+<p><b> The Employee's First and Last name
+The Employee's ID Number
+The Employee's Job Title
+The Employee's Salary (Yearly)
+The form should have a submit button that
+
+clears out the form and
+stores the submitted information.</b> </p>
+
+<p>
+Then, that information should be appended to the DOM so the user of the application can see the information they just entered.
+
+Finally, your logic should calculate all of the employee salaries and report back what the monthly cost of salaries is.
+</p>
