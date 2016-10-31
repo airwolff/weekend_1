@@ -1,33 +1,40 @@
 $(document).ready(function() {
     var array = [];
-    $('#employeeinfo').on('submit', function(event) {
+
+    var totalEmployeeSalaryEpenditure = 0;
+
+    $('#monthlyExpenditure').append('  $' + totalEmployeeSalaryEpenditure + ' per month.');
+
+    $('#employeeInfo').on('submit', function(event) {
+
       event.preventDefault();
 
       // initialize a new variable as an empty object
-      var values = {};
+      var employeeData = {};
 
       // convert the form inputs into an array
-      var fields = $('#employeeinfo').serializeArray();
-
+      var fields = $('#employeeInfo').serializeArray();
+      console.log(fields);
       // iterate over the array and transfer each index into a new property on an object with the value of what was entered.
       fields.forEach(function(element, index, array) {
-        // review index notation vs. dot notation on objects
-        // here, dot notation wouldn't work
-        values[element.name] = element.value;
+        employeeData[element.name] = element.value;
       });
 
-
-
-      console.log(values);
+      console.log(employeeData);
 
       // clear out inputs
-      $('#employeeinfo').find('input[type=text]').val('');
+      $('#employeeInfo').find('input', '').val('');
 
       // appends to DOM on submit event
-      appendDom(values);
+      appendDom(employeeData);
 
-      salaryMath(values);
-      console.log(salaryMath(values));
+      // updates the monthly expenditures as employees are entered
+      totalEmployeeSalaryEpenditure = totalMonthlySalary(employeeData, totalEmployeeSalaryEpenditure);
+console.log(totalEmployeeSalaryEpenditure);
+
+      // Updates page with total monthly salary expenditures
+      $('#monthlyExpenditure').empty();
+      $('#monthlyExpenditure').append('  $' + Math.round(totalEmployeeSalaryEpenditure) + ' per month.');
     });
 
     //function that targets div id employee table. Appends div person to table and creates var of each person to insert
@@ -39,31 +46,29 @@ $(document).ready(function() {
       //append table data for each employee entered
 
       $individualEmployeeDetails.append(
+        '<tbody>' +
         '<tr>' +
         '<td>' + empInfo.employeeFirstName + '</td>' +
         '<td>' + empInfo.employeeLastName + '</td>' +
         '<td>' + empInfo.empNumber + '</td>' +
         '<td>' + empInfo.jobTitle + '</td>' +
         '<td>' + empInfo.yearlySalary + '</td>' +
-        '</tr>'
+        '<td><button id="delete">Delete</button>' +
+        '</tr>' +
+        '</tbody>'
       );
+      // alternates the color of table rows
+      $('#employeeTable').find('tr:even').css({'background-color': '#95A5A6'}).end().find('tr:odd').css({'background-color':'#ECF0F1'});
     }
-
-
-
-    var monthlySalary = null;
-
-      var salaryMath = function(empSalary) {
-        $prevSalary = $('#monthlyExpend').val();
-        parseInt($prevSalary);
-        $prevSalary += empSalary.yearlySalary;
-        return $prevSalary;
-      };
-
 
     //function to add yearly salaries of all employees together and return total of those salaries monthly
-    function totalMonthlySalary(empNumbers) {
-      $('#monthlyExpenditure').append('<div id="monthlyNumbers"></div>');
-      var $totalMonthly = $('#monthlyExpend').replaceWith()
-    }
+    function totalMonthlySalary(empNumbers, prevMonthly) {
+      var annual = empNumbers.yearlySalary;
+      var monthly = annual / 12;
+      var total = monthly + prevMonthly;
+      total = total;
+      return total;
+      }
+
+      $()
   });
