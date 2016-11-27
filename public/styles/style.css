@@ -5,20 +5,11 @@
     font-family: 'Space Mono', monospace;
 }
 
-body {
-    background: #F1C40F;
-    font-family: 'Work Sans', sans-serif;
-}
-
 table {
     table-layout: fixed;
     border: 1px solid #E67E22;
     padding: 10px;
     margin: 30px;
-}
-
-input {
-    border-color: #E67E22;
 }
 
 #answer {

@@ -1,20 +1,23 @@
-<div>
-    <form id="employeeInfo">
-        <label for="employeeFirstName">Employee First Name:</label>
-        <input type="text" id="employeeFirstName" name="employeeFirstName" required/>
+<div class="form-group">
+    <form class="navbar-form" id="employeeInfo">
+        <label class="sr-only" for="first_name">Employee First Name:</label>
+        <input type="text" id="first_name" ng-model="emp_input.newEmp.first_name" name="first_name" class="form-control" placeholder="First Name" required/>
 
-        <label for="employeeLastName">Employee Last Name:</label>
-        <input type="text" id="employeeLastName" name="employeeLastName" required/>
+        <label class="sr-only" for="last_name">Employee Last Name:</label>
+        <input type="text" id="last_name" ng-model="emp_input.newEmp.last_name" name="last_name" class="form-control" placeholder="Last Name" required/>
 
-        <label for="empNumber">Employee ID Number:</label>
-        <input type="number" id="empNumber" name="empNumber" required/>
+        <label class="sr-only" for="emp_number">Employee ID Number:</label>
+        <input type="number" id="emp_number" ng-model="emp_input.newEmp.emp_number" name="emp_number" class="form-control" placeholder="Employee ID Number" required/>
 
-        <label for="jobTitle">Job Title:</label>
-        <input type="text" id="jobTitle" name="jobTitle" required/>
+        <label class="sr-only" for="job_title">Job Title:</label>
+        <input type="text" id="job_title" ng-model="emp_input.newEmp.job_title" name="job_title" class="form-control" placeholder="Job Title" required/>
 
-        <label for="yearlySalary">Yearly Salary:</label>
-        <input type="number" id="yearlySalary" name="yearlySalary" required/>
+        <label class="sr-only" for="yearly_salary">Yearly Salary:</label>
+        <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" id="yearly_salary" ng-model="emp_input.newEmp.yearly_salary" name="yearly_salary" class="form-control" placeholder="Yearly Salary" required/>
+        </div>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn-default">Submit</button>
     </form>
 </div>

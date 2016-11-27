@@ -4,10 +4,7 @@
   "description": "* The basics work as far as I can tell!",
   "main": "server/server.js",
   "dependencies": {
-    "angular": "^1.5.9",
-    "angular-route": "^1.5.9",
     "body-parser": "^1.15.2",
-    "bootstrap": "^3.3.7",
     "express": "^4.14.0",
     "path": "^0.12.7",
     "pg": "^6.1.0"
