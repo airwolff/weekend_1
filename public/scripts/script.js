@@ -1,5 +1,33 @@
-var salaryApp = angular.module("salaryApp", []);
+var salaryApp = angular.module("salaryApp", ['ngRoute']);
 
+// templates and controllers
+app.config(['$routeProvider', function($routeProvider) {
+  $routeProvider
+    .when('/home', {
+      templateUrl: '/views/templates/home.html',
+      controller: 'HomeController',
+      controllerAs: 'home'
+    })
+    .when('/emp' ,{
+      templateUrl: '/views/templates/warehouse.html',
+      controller: 'WarehouseController',
+      controllerAs: 'warehouse'
+    })
+    .when('/customers' ,{
+      templateUrl: '/views/templates/customers.html',
+      controller: 'CustomersController',
+      controllerAs: 'customers'
+    })
+    .when('/orders' ,{
+      templateUrl: '/views/templates/orders.html',
+      controller: 'OrdersController',
+      controllerAs: 'orders'
+    })
+    .otherwise({
+      redirectTo: 'home'
+
+    });
+}]);
 
 
 
@@ -99,6 +127,4 @@ $(document).ready(function () {
 		total = total;
 		return total;
 	}
-
-	$()
 });

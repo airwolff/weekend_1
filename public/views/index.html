@@ -5,20 +5,19 @@
         <title>Salary Expenditure</title>
         <script src="../vendor/angular.min.js" charset="utf-8"></script>
         <script src="../vendor/jquery-3.1.1.min.js"></script>
-        <link rel="stylesheet" href="../vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="../styles/bootstrap.min.css" />
         <link rel="stylesheet" href="../styles/style.css" />
         <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
     </head>
+    <body ng-app="myApp">
 
-    <body>
-        <h1>Monthly Salary Expenditure</h1>
+      <header ng-include="'/views/templates/header.html'" class="jumbotron text-center"></header>
 
+      <div ng-include="'/views/templates/nav.html'"></div>
 
+      <main ng-view></main>
 
-        <div id="answer">
-            <h2>Total Monthly Expenditure</h2>
-            <h3><span id="monthlyExpenditure"></span></h3>
-        </div>
+      <footer class="text-center" ng-include="'/views/templates/footer.html'"></footer>
+
     </body>
-
 </html>
