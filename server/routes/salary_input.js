@@ -69,7 +69,7 @@ router.put('/:id', function (req, res) {
 
 		client.query(
 			'UPDATE monthly_salary SET first_name=$1, last_name=$2, emp_number=$3, job_title=$4, yearly_salary=$5' +
-			' WHERE id=$7',
+			' WHERE id=$6',
 			// array of values to use in the query above
       [empPut.first_name, empPut.last_name, empPut.emp_number, empPut.job_title, empPut.yearly_salary, empID],
 			function (err, result) {

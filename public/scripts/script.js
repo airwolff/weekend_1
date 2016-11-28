@@ -51,7 +51,7 @@ salaryApp.controller('emp_inputController', ["$http", function ($http) {
 		$http.delete('/salary_input/' + empObj.id)
 			.then(function (response) {
 				console.log('DELETE finished. Get employees again.');
-				getBooks();
+				getEmps();
 			});
 	};
 
@@ -60,7 +60,7 @@ salaryApp.controller('emp_inputController', ["$http", function ($http) {
 		$http.put('/salary_input/' + empObj.id, empObj)
 			.then(function (response) {
 				console.log('Edited ' + empObj);
-				getBooks();
+				getEmps();
 			});
 	};
 }]);
