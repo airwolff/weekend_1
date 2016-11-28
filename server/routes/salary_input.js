@@ -1,31 +1,31 @@
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
-var connectionString = 'postgres://localhost:5432/salary_monthly';
+var connectionString = 'postgres://localhost:5432/salary';
 
 // Employee input sent to DB
 router.post('/', function (req, res) {
-	var newBook = req.body;
-	console.log(newBook);
+	var newEmp = req.body;
+	console.log(newEmp);
 	pg.connect(connectionString, function (err, client, done) {
 		if (err) {
-			console.log('connection error: ', err);
+			console.log('post connection error: ', err);
 			res.sendStatus(500);
-		}
+		} else {
+			client.query('INSERT INTO monthly_salary (first_name, last_name, emp_number, job_title, yearly_salary)' +
+				'VALUES ($1, $2, $3, $4, $5)', [newEmp.first_name, newEmp.last_name, newEmp.emp_number, newEmp.job_title, newEmp.yearly_salary],
+				function (err, result) {
+					done();
 
-		client.query(
-			'INSERT INTO monthly_salary (first_name, last_name, emp_number, job_title, yearly_salary) ' +
-			'VALUES ($1, $2, $3, $4, $5)', [newEmp.first_name, newEmp.last_name, newEmp.emp_number, newEmp.job_title, newEmp.yearly_salary],
-			function (err, result) {
-				done();
-
-				if (err) {
-					console.log('insert query error: ', err);
-					res.sendStatus(500);
-				} else {
-					res.sendStatus(201);
+					if (err) {
+						console.log('insert query error: ', err);
+						res.sendStatus(500);
+					} else {
+						res.sendStatus(201);
+					}
 				}
-			});
+			);
+		}
 	});
 });
 
