@@ -15,9 +15,6 @@ router.get('/', function (req, res) {
 
 		client.query('SELECT * FROM monthly_salary', function (err, result) {
 			done();
-
-			// console.log('the client!:', client);
-
 			if (err) {
 				console.log('select query error: ', err);
 				res.sendStatus(500);
@@ -41,7 +38,6 @@ router.post('/', function (req, res) {
 				'VALUES ($1, $2, $3, $4, $5)', [newEmp.first_name, newEmp.last_name, newEmp.emp_number, newEmp.job_title, newEmp.yearly_salary],
 				function (err, result) {
 					done();
-
 					if (err) {
 						console.log('insert query error: ', err);
 						res.sendStatus(500);
@@ -80,7 +76,7 @@ router.put('/:id', function (req, res) {
 					res.sendStatus(200);
 				}
 			});
-	}); // close connect
+	});
 });
 
 // delete employee data
@@ -93,12 +89,10 @@ router.delete('/:id', function (req, res) {
 			console.log('connection error: ', err);
 			res.sendStatus(500);
 		}
-
 		client.query(
 			'DELETE FROM monthly_salary WHERE id = $1', [empID],
 			function (err, result) {
 				done();
-
 				if (err) {
 					res.sendStatus(500);
 				} else {

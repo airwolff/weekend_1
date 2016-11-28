@@ -19,16 +19,19 @@
         </div>
         <button class="btn btn-default" ng-click="input.addEmp()">Submit</button>
     </form>
-    </div>
-
-    <div class="empEdit form-group" ng-repeat="emp in input.employees">
-      <form class="navbar-form">
-        <input type="text" ng-model="emp.first_name" class="form-control"/>
-        <input type="text" ng-model="emp.last_name" class="form-control"/>
-        <input type="number" ng-model="emp.emp_number" class="form-control"/>
-        <input type="text" ng-model="emp.job_title" class="form-control"/>
-        <input type="number" ng-model="emp.yearly_salary" class="form-control"/>
+</div>
+{{input.employees}}
+<div class="empEdit form-group" ng-repeat="emp in input.employees">
+    <form class="navbar-form">
+        <input type="text" ng-model="emp.first_name" class="form-control" />
+        <input type="text" ng-model="emp.last_name" class="form-control" />
+        <input type="number" ng-model="emp.emp_number" class="form-control" />
+        <input type="text" ng-model="emp.job_title" class="form-control" />
+        <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="number" ng-model="emp.yearly_salary" class="form-control" />
+        </div>
         <button ng-click="input.editEmp(emp)" class="btn btn-default">Edit</button>
         <button ng-click="input.deleteEmp(emp)" class="btn btn-default">Delete</button>
-        </form>
-    </div>
+    </form>
+</div>

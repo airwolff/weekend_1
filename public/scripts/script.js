@@ -66,10 +66,15 @@ salaryApp.controller('emp_inputController', ["$http", function ($http) {
 }]);
 
 // expenditure output for table
-salaryApp.controller('emp_outputController', ["$http", function ($http) {
-	console.log('expenditure output controller running');
-	var self = this;
-}]);
+// salaryApp.controller('emp_outputController', ["$http", function ($http) {
+// 	console.log('expenditure output controller running');
+// 	var self = this;
+// 	calcSalary();
+//
+// 	self.calcSalary = function
+//
+//
+// }]);
 
 
 
