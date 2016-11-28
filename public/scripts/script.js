@@ -14,7 +14,7 @@ salaryApp.config(['$routeProvider', function ($routeProvider) {
 			controllerAs: 'output'
 		})
 		.otherwise({
-			redirectTo: 'emp_table'
+			redirectTo: 'emp_input'
 		});
 }]);
 
@@ -26,6 +26,7 @@ salaryApp.controller('emp_inputController', ["$http", function ($http) {
 	var self = this;
 	self.newEmp = {};
 	self.employees = [];
+	getEmps();
 
 	self.addEmp = function () {
 		console.log('new employee: ', self.newEmp);

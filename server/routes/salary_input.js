@@ -3,6 +3,31 @@ var router = express.Router();
 var pg = require('pg');
 var connectionString = 'postgres://localhost:5432/salary';
 
+// GET to show employee data to edit or delet if needed on input screen
+router.get('/', function (req, res) {
+	console.log('message on REC: ', req.message);
+	// get books from DB
+	pg.connect(connectionString, function (err, client, done) {
+		if (err) {
+			console.log('connection error: ', err);
+			res.sendStatus(500);
+		}
+
+		client.query('SELECT * FROM monthly_salary', function (err, result) {
+			done();
+
+			// console.log('the client!:', client);
+
+			if (err) {
+				console.log('select query error: ', err);
+				res.sendStatus(500);
+			}
+			res.send(result.rows);
+		});
+	});
+});
+
+
 // Employee input sent to DB
 router.post('/', function (req, res) {
 	var newEmp = req.body;
