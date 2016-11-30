@@ -5,12 +5,12 @@ salaryApp.config(['$routeProvider', function ($routeProvider) {
 	$routeProvider
 		.when('/emp_input', {
 			templateUrl: '../views/templates/emp_input.html',
-			controller: 'emp_inputController',
+			controller: 'Emp_inputController',
 			controllerAs: 'input'
 		})
 		.when('/emp_table', {
 			templateUrl: '../views/templates/emp_table.html',
-			controller: 'emp_tableController',
+			controller: 'Emp_tableController',
 			controllerAs: 'output'
 		})
 		.otherwise({
