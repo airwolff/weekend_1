@@ -1,26 +1,33 @@
 <div id="emp_table">
-    <table class="table center table-hover table-bordered">
-        <thead>
-            <tr id="header">
-                <th>
-                    First Name
-                </th>
-                <th>
-                    Last Name
-                </th>
-                <th>
-                    Emp Number
-                </th>
-                <th>
-                    Job Title
-                </th>
-                <th>
-                    Yearly Salary
-                </th>
-            </tr>
-        </thead>
-        <tbody id="body">
-
-        </tbody>
-    </table>
+<table class="table center table-hover table-bordered">
+  <thead>
+      <tr id="header">
+          <th>
+              First Name
+          </th>
+          <th>
+              Last Name
+          </th>
+          <th>
+              Emp Number
+          </th>
+          <th>
+              Job Title
+          </th>
+          <th>
+              Yearly Salary
+          </th>
+      </tr>
+  </thead>
+<tbody id="body">
+<tr ng-repeat="emp in output.employees">
+  <td ng-model="emp.first_name" >{{emp.first_name}}</td>
+  <td ng-model="emp.last_name" >{{emp.last_name}}</td>
+  <td ng-model="emp.emp_number" >{{emp.emp_number}}</td>
+  <td ng-model="emp.job_title" >{{emp.job_title}}</td>
+  <td ng-model="emp.totalSalary" >{{emp.totalSalary}}</td>
+</tr>
+</tbody>
+</table>
 </div>
+{{ouput.employees}}
