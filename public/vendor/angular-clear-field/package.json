@@ -1,0 +1,91 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "angular-clear-field",
+        "scope": null,
+        "escapedName": "angular-clear-field",
+        "name": "angular-clear-field",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/AndyWolff/sigma/weekend/weekend_1"
+    ]
+  ],
+  "_from": "angular-clear-field@latest",
+  "_id": "angular-clear-field@1.0.0",
+  "_inCache": true,
+  "_location": "/angular-clear-field",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/angular-clear-field-1.0.0.tgz_1472391179367_0.6729125417768955"
+  },
+  "_npmUser": {
+    "name": "aparnap01",
+    "email": "aparna.well@gmail.com"
+  },
+  "_npmVersion": "3.5.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "angular-clear-field",
+    "scope": null,
+    "escapedName": "angular-clear-field",
+    "name": "angular-clear-field",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-clear-field/-/angular-clear-field-1.0.0.tgz",
+  "_shasum": "f16d5b06a4feda57740ae8504fa7e3c1ed286d77",
+  "_shrinkwrap": null,
+  "_spec": "angular-clear-field",
+  "_where": "/Users/AndyWolff/sigma/weekend/weekend_1",
+  "author": {
+    "name": "aparnap",
+    "email": "aparna.well@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/aparnapatil01/angular-clear-field-directive/issues"
+  },
+  "dependencies": {},
+  "description": "Clears input field",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f16d5b06a4feda57740ae8504fa7e3c1ed286d77",
+    "tarball": "https://registry.npmjs.org/angular-clear-field/-/angular-clear-field-1.0.0.tgz"
+  },
+  "gitHead": "47b00d2bd3c828131a8616a7e7bfc5e8496ca970",
+  "homepage": "https://github.com/aparnapatil01/angular-clear-field-directive#readme",
+  "keywords": [
+    "angular",
+    "clear",
+    "input",
+    "field"
+  ],
+  "license": "ISC",
+  "main": "script.js",
+  "maintainers": [
+    {
+      "name": "aparnap01",
+      "email": "aparna.well@gmail.com"
+    }
+  ],
+  "name": "angular-clear-field",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aparnapatil01/angular-clear-field-directive.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

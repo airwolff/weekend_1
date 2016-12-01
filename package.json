@@ -4,8 +4,10 @@
   "description": "* The basics work as far as I can tell!",
   "main": "server/server.js",
   "dependencies": {
+    "angular-clear-field": "^1.0.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "normalize": "^0.3.1",
     "path": "^0.12.7",
     "pg": "^6.1.0"
   },

@@ -3,25 +3,21 @@
 
     <head>
         <title>Employee Monthly Expenditures</title>
-        <link rel="stylesheet" href="./styles/bootstrap.min.css" />
-        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/normalize.css"/>
+        <link rel="stylesheet" href="./styles/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./styles/style.css"/>
         <link href="https://fonts.googleapis.com/css?family=Space+Mono|Work+Sans" rel="stylesheet">
         <script src="./vendor/angular.min.js"></script>
         <script src="./vendor/angular-route.min.js"></script>
         <script src="./vendor/jquery-3.1.1.min.js"></script>
         <script src="./scripts/script.js"></script>
+        <script src="./scripts/controllers/input.controller.js"></script>
+        <script src="./scripts/controllers/output.controller.js"></script>
     </head>
-
     <body ng-app="salaryApp">
-
         <header ng-include="'/views/templates/header.html'" class="jumbotron text-center"></header>
-
         <div ng-include="'/views/templates/nav.html'"></div>
-
         <main ng-view></main>
-
         <footer class="text-center" ng-include="'/views/templates/footer.html'"></footer>
-
     </body>
-
 </html>
