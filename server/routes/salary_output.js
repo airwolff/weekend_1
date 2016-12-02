@@ -12,7 +12,7 @@ router.get('/', function (req, res) {
 			res.sendStatus(500);
 		}
 
-		client.query('SELECT * FROM monthly_salary', function (err, result) {
+		client.query('SELECT * FROM monthly_salary;', function (err, result) {
 			done();
 
 			// console.log('the client!:', client);
